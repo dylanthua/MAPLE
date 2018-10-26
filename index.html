@@ -19,6 +19,11 @@
                 display: block;
                 margin: auto;
             }
+
+            .wide{
+                width: calc(100% - 2em);
+                margin: 1em;
+            }
         </style>
     </head>
 	<body>
@@ -30,15 +35,17 @@
 
         <img src="images/maple.png" class="center fit">
 
-        <div class="login" style="margin: 2em">
-            <form class="login-form">
+        <div class="login margin">
+            <form class="login-form wide">
                 <div class="form-group">
-                    <input type="ID" class="form-control" id="userID" placeholder="login ID">
+                    <input type="text" class="form-control" id="userID" placeholder="login ID">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" id="userPassword" placeholder="Password">
                 </div>
-                <button id="login-btn" type="submit" class="btn btn-primary center fit">Log in</button>
+                <button id="login-btn" type="submit" class="btn btn-primary center wide">Log in</button>
+                <button id="join-btn" type="submit"  class="btn btn-primary center wide">Join a poll</button>
+                <button id="guest-btn" type="submit" class="btn btn-primary center wide">Use as Guest</button>
             </form>
         </div>
 
