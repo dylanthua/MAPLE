@@ -2,11 +2,50 @@
 <html>
 	<head>
 		<title>Project MAPLE</title>
-	</head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- for the logo -->
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            .fit { /* set relative picture size */
+                max-width: 50%;
+                max-height: 66%;
+            }
+            .center {
+                display: block;
+                margin: auto;
+            }
+        </style>
+    </head>
 	<body>
-		<a href="http://courses.pgbovine.net/cogs120-cse170/">Course Website</a>
-		
+        <!-- top navbar for the websites -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-text center">Project MAPLE</a>
+        </nav>
+
+
+        <img src="images/maple.png" class="center fit">
+
+        <div class="login" style="margin: 2em">
+            <form class="login-form">
+                <div class="form-group">
+                    <input type="ID" class="form-control" id="userID" placeholder="login ID">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="userPassword" placeholder="Password">
+                </div>
+                <button id="login-btn" type="submit" class="btn btn-primary center fit">Log in</button>
+            </form>
+        </div>
+
+
+        <!-- javascript -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
 	</body>
 </html>
