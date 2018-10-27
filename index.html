@@ -24,12 +24,6 @@
                 width: calc(100% - 2em);
                 margin: 1em;
             }
-
-            .right{
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }
         </style>
     </head>
 	<body>
@@ -39,7 +33,9 @@
         </nav>
 
 
-        <img src="images/maple.png" class="center fit">
+        <a href="#aboutModal" role="button" data-toggle="modal">
+            <img id="logo" src="images/maple.png" class="center fit">
+        </a>
 
         <div class="login margin">
             <form class="login-form wide">
@@ -54,8 +50,6 @@
                 <button id="guest-btn" type="submit" class="btn btn-primary center wide">Use as Guest</button>
                 <button id="signup" type="button" class="btn btn-link center" data-toggle="modal" data-target="#signupModal">sign up</button>
             </form>
-
-            <button type="button" class="btn btn-link right" data-toggle="modal" data-target="#aboutModal">about us</button>
         </div>
 
         <!-- About Us Modal -->
