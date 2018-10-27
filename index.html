@@ -24,18 +24,6 @@
                 width: calc(100% - 2em);
                 margin: 1em;
             }
-
-            .left{
-                position: fixed;
-                bottom: 0;
-                left: 0;
-            }
-
-            .right{
-                position: fixed;
-                bottom: 0;
-                right: 0;
-            }
         </style>
     </head>
 	<body>
@@ -59,15 +47,12 @@
                 <button id="join-btn" type="submit"  class="btn btn-primary center wide">Join a poll</button>
                 <button id="guest-btn" type="submit" class="btn btn-primary center wide">Use as Guest</button>
             </form>
+
+
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#aboutModal">about us</button>
         </div>
 
-        <div class="footer fixed-bottom margin">
-            <button type="button" class="btn btn-link right" data-toggle="modal" data-target="#aboutModal">about us</button>
-        </div>
-
-        <!-- Button trigger modal -->
-
-        <!-- Modal -->
+        <!-- About Us Modal -->
         <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
