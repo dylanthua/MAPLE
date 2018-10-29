@@ -26,7 +26,7 @@ function join(e){
     if(code == null || code === ""){
     }else{
         if(code === pollCode){
-            alert("JOINING");
+            window.location.replace(code+".html");
         }else{
             alert("POLL NOT FOUND!");
         }
@@ -43,8 +43,14 @@ function guest(e){
     e.preventDefault();
 }
 
-$("#add-activities").click(findActivities);
+$("#signup").click(signup);
+function signup(e){
 
+    e.preventDefault();
+}
+
+<!-- activities.html stuff -->
+$("#add-activities").click(findActivities);
 function findActivities(e){
     alert("looking for activites");
 }
