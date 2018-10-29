@@ -31,7 +31,6 @@ function join(e){
             alert("POLL NOT FOUND!");
         }
     }
-
     e.preventDefault();
 }
 
@@ -63,3 +62,12 @@ function backToHome(e){
     }
     e.preventDefault();
 }
+
+
+<!-- for voting in a poll -->
+$("#submit_vote").click(function(e){
+   alert("VOTE SUBMITTED!");
+
+   window.location.replace("index.html");
+   e.preventDefault();
+});
