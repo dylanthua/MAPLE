@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Activities</title>
+    <title>Poll Results</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -16,6 +16,7 @@
         .center {
             display: block;
             margin: auto;
+            text-align: center;
         }
         .bottom{
             position: fixed;
@@ -29,19 +30,28 @@
 </head>
 </head>
 <body>
-    <!-- top navbar for the websites -->
-    <nav class="navbar navbar-light bg-light">
-        <a class="nav-pills" id="back">< back</a>
-        <a class="navbar-text center">Activities List</a>
-        <a class="nav-pills" id="add-activities">add</a>
-    </nav>
+<!-- top navbar for the websites -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-text center">Poll Results</a>
+</nav>
+
+<div class="result center">
+    <h3> THE CHOSEN ACTIVITY IS</h3>
+
+    <h1>BOWLING</h1>
+    <h1>8 votes</h1>
+    <br/><br/><br/><br/><br/>
+    <h3>runner up</h3>
+    <h4>Movies</h4>
+    <h4>4 votes</h4>
+</div>
 
 
-    <button class="btn btn-primary bottom wide" id="start-poll">Start Poll</button>
+<button class="btn btn-primary bottom wide" id="finish-poll">Finish</button>
 
-    <!-- javascript -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

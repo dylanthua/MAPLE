@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Find Activities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- for the logo -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .center {
+            display: block;
+            margin: auto;
+        }
+        .search_radius *{
+            margin: 1px;
+            display: inline;
+            width: 15%;
+        }
+        .wide{
+            width: calc(100% - 2em);
+            margin: 1em;
+        }
+        .bottom{
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+</head>
+<body>
+<!-- top navbar for the websites -->
+<nav class="navbar navbar-light bg-light">
+    <a class="nav-pills" id="back_to_activities">< back</a>
+    <a class="navbar-text center">Find Activities</a>
+    <a class="nav-pills" id="refresh">update</a>
+</nav>
+
+<!-- allow the user to input search radius -->
+<div class="search_radius">
+    <p>Find activities within </p>
+    <form><input type="number" ></form>
+    <p> miles of me</p>
+</div>
+
+<div class="pre-scrollable form-check activity-list">
+    <input class="form-check-input" type="checkbox" value="" id="input1">
+    <label class="form-check-label" for="input1">Bowling</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input2">
+    <label class="form-check-label" for="input2">Movies</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input3">
+    <label class="form-check-label" for="input3">Mall</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input4">
+    <label class="form-check-label" for="input4">Ice Skating</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input5">
+    <label class="form-check-label" for="input5">Batting Cage</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input6">
+    <label class="form-check-label" for="input6">Pumpkin Patch</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input7">
+    <label class="form-check-label" for="input7">Park</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input8">
+    <label class="form-check-label" for="input8">Go Kart</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="input9">
+    <label class="form-check-label" for="input9">Paint Ball</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="inputa">
+    <label class="form-check-label" for="inputa">Pilates</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="inputb">
+    <label class="form-check-label" for="inputb">Yoga</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="inputc">
+    <label class="form-check-label" for="inputc">Workout</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="inputd">
+    <label class="form-check-label" for="inputd">Obstacle Course</label><br>
+
+    <input class="form-check-input" type="checkbox" value="" id="inpute">
+    <label class="form-check-label" for="inpute">Skiing</label><br>
+</div>
+
+
+<button class="btn btn-primary footer wide bottom" id="done-searching">done</button>
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
