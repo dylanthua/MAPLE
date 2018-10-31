@@ -47,7 +47,7 @@
                 <button id="login-btn" type="submit" class="btn btn-primary center wide">Log in</button>
                 <button id="join-btn" type="submit"  class="btn btn-primary center wide">Join a poll</button>
                 <button id="guest-btn" type="submit" class="btn btn-primary center wide">Use as Guest</button>
-                <button id="signup" type="button" class="btn btn-link center" data-toggle="modal" data-target="#signupModal">sign up</button>
+                <button id="signup" type="button" class="btn btn-link center" data-toggle="modal" data-target="#SignUpModal">sign up</button>
             </form>
         </div>
 
@@ -71,6 +71,30 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModalTitle" aria-hidden="true">
+            <div class="modal-dialog" role="dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="SignUpModalTitle">Sign Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <input type="text" class="wide" id="newID" placeholder="userID">
+                            <input type="password" class='wide' id="newPassword" placeholder="password">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                        <button type="button" id="done-signup" class="btn btn-primary" data-dismiss="modal">Sign Up</button>
                     </div>
                 </div>
             </div>

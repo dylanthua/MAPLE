@@ -3,15 +3,18 @@ var samplePwd = "password";
 
 var loggedIn = false;
 var creator = true;
+var accounts =  {};
 var activities = [];
 
 <!-- logging in with account -->
 $("#login-btn").click(login);
 function login(e){
+    accounts['bob'] = 'password';
+
     var id = $("#userID").val();
     var pwd = $("#userPassword").val();
 
-    if(id === sampleID && pwd === samplePwd) {
+    if(pwd === accounts[id]) {
         creator = true;
         loggedIn = true;
         window.location.replace("activity.html");
@@ -48,11 +51,14 @@ function guest(e){
 }
 
 <!-- signup will add modal later -->
-$("#signup").click(signup);
-function signup(e){
+$(document).delegate("#done-signup", "click",function(e){
+    var newID = $("#newID").val();
+    var newPWD = $("#newPassword").val();
+    alert("Account created: " + newID + "\t" + newPWD);
 
+    accounts[newID] = newPWD;
     e.preventDefault();
-}
+});
 
 <!-- activities.html -->
 $("#back").click(backToHome);
