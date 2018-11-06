@@ -21,9 +21,7 @@ function login(e){
 }
 
 <!-- for joining an existing poll. -->
-var pollCode = "1a234b";
-$("#join-btn").click(join);
-function join(e){
+$("#join-btn").click(function join(e){
     const code = prompt("Please enter poll code");
     if(code == null || code === ""){
     }else{
@@ -41,7 +39,7 @@ function join(e){
             }
         });
     }
-}
+});
 
 $("#guest-btn").click(function (e){
    window.location.replace("activity.html");
