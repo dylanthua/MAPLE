@@ -24,15 +24,29 @@ function login(e){
 var pollCode = "1a234b";
 $("#join-btn").click(join);
 function join(e){
-    var code = prompt("Please enter poll code");
+    const code = prompt("Please enter poll code");
     if(code == null || code === ""){
     }else{
-        $.post('/join-poll', String(code), function(){
-            console.log("callback from join button");
+        $.ajax({
+            url:  "/join-poll",
+            type: "POST",
+            data: {'code': code},
+            success: function(data){
+                if(data.error) {
+                    console.log("boi");
+                    alert("Poll NOT Found!")
+                }else {
+                    window.location.replace(data);
+                }
+            }
         });
     }
-    e.preventDefault();
 }
+
+$("#guest-btn").click(function (e){
+   window.location.replace("activity.html");
+   e.preventDefault();
+});
 
 $(document).delegate("#done-signup", "click",function(e){
     var newID = $("#newID").val();

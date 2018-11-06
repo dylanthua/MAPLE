@@ -4,6 +4,8 @@
   "description": "Team project for CSE170",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "create-html": "^4.1.0",
     "express": "^4.16.4"
   },
   "devDependencies": {},
