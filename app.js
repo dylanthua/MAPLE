@@ -29,13 +29,32 @@ app.post('/create-poll', function(req, res){
     const file      = "public/" + fileName;
 
     const html = createHTML({
-        title: "Poll " + poll_code,
-        css: 'css/bootstrap.css',
-        lang: 'en',
+        head:'\
+        <meta charset="UTF-8">\
+        <title>POLL 1a234b</title>\
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">\
+        <style>\
+        * {\
+            padding: 0;\
+            margin: 0;\
+        }\
+        .center {\
+            display: block;\
+            margin: auto;\
+        }\
+        .bottom{\
+            position: fixed;\
+            bottom: 0;\
+            left: 0;\
+            right: 0;\
+        }\
+        </style>',
+
         body: '\
             <nav class="navbar navbar-light bg-light">\
                 <a class="nav-pills" id="back"><</a>\
-                <a class="navbar-text center">Poll 1a234b</a>\
+                <a class="navbar-text center">Poll ' + poll_code + '</a>\
             </nav>\
             <div class="form-check">\
                 <input class="form-check-input" type="checkbox" value="" id="input1">\
@@ -46,12 +65,6 @@ app.post('/create-poll', function(req, res){
                 <label class="form-check-label" for="input3">Mall</label><br>\
                 <input class="form-check-input" type="checkbox" value="" id="input4">\
                 <label class="form-check-label" for="input4">Ice Skating</label><br>\
-                <input class="form-check-input" type="checkbox" value="" id="input5">\
-                <label class="form-check-label" for="input5">Batting Cage</label><br>\
-                <input class="form-check-input" type="checkbox" value="" id="input6">\
-                <label class="form-check-label" for="input6">Pumpkin Patch</label><br>\
-                <input class="form-check-input" type="checkbox" value="" id="input7">\
-                <label class="form-check-label" for="input7">Park</label><br>\
             </div>\
             <div class="card-footer bottom">\
                 <button class="btn btn-primary center" id="submit_vote">SUBMIT</button>\
