@@ -1,0 +1,25 @@
+{
+  "name": "maple",
+  "version": "1.0.0",
+  "description": "Team project for CSE170",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "create-html": "^4.1.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jylee14/MAPLE.git"
+  },
+  "author": "Jun Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jylee14/MAPLE/issues"
+  },
+  "homepage": "https://github.com/jylee14/MAPLE#readme"
+}

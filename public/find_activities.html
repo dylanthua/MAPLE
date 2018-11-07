@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Find Activities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- for the logo -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .center {
+            display: block;
+            margin: auto;
+        }
+        .search_radius *{
+            margin: 1px;
+            display: inline;
+            width: 15%;
+        }
+        .wide{
+            width: calc(100% - 2em);
+            margin: 1em;
+        }
+        .bottom{
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+</head>
+<body>
+<!-- top navbar for the websites -->
+<nav class="navbar navbar-light bg-light">
+    <a class="nav-pills" id="back_to_activities">< back</a>
+    <a class="navbar-text center">Find Activities</a>
+    <a class="nav-pills" id="refresh">update</a>
+</nav>
+
+<!-- allow the user to input search radius -->
+<div class="search_radius">
+    <p>Find activities within </p>
+    <form class="form-control"><input type="number" id="radius"></form>
+    <p> miles of me</p>
+</div>
+
+<div class="pre-scrollable form-check activity-list" id="nearby-activities">
+
+</div>
+
+
+<button class="btn btn-primary footer wide bottom" id="done-searching">done</button>
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/find_activities.js"></script>
+</body>
+</html>
