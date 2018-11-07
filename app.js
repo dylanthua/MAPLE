@@ -28,10 +28,20 @@ app.post('/create-poll', function(req, res){
     const fileName  = poll_code + ".html";
     const file      = "public/" + fileName;
 
+    const activities_list ='\
+        <input class="form-check-input" type="checkbox" value="" id="input1">\
+        <label class="form-check-label" for="input1">Bowling</label><br>\
+        <input class="form-check-input" type="checkbox" value="" id="input2">\
+        <label class="form-check-label" for="input2">Movies</label><br>\
+        <input class="form-check-input" type="checkbox" value="" id="input3">\
+        <label class="form-check-label" for="input3">Mall</label><br>\
+        <input class="form-check-input" type="checkbox" value="" id="input4">\
+        <label class="form-check-label" for="input4">Ice Skating</label><br>'
+
     const html = createHTML({
         head:'\
         <meta charset="UTF-8">\
-        <title>POLL 1a234b</title>\
+        <title>POLL ' + poll_code + '</title>\
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">\
         <style>\
@@ -56,16 +66,8 @@ app.post('/create-poll', function(req, res){
                 <a class="nav-pills" id="back"><</a>\
                 <a class="navbar-text center">Poll ' + poll_code + '</a>\
             </nav>\
-            <div class="form-check">\
-                <input class="form-check-input" type="checkbox" value="" id="input1">\
-                <label class="form-check-label" for="input1">Bowling</label><br>\
-                <input class="form-check-input" type="checkbox" value="" id="input2">\
-                <label class="form-check-label" for="input2">Movies</label><br>\
-                <input class="form-check-input" type="checkbox" value="" id="input3">\
-                <label class="form-check-label" for="input3">Mall</label><br>\
-                <input class="form-check-input" type="checkbox" value="" id="input4">\
-                <label class="form-check-label" for="input4">Ice Skating</label><br>\
-            </div>\
+            <div class="form-check">' + activities_list +
+            '</div>\
             <div class="card-footer bottom">\
                 <button class="btn btn-primary center" id="submit_vote">SUBMIT</button>\
             </div>\
